@@ -10,3 +10,13 @@ This volume setting from the `docker-compose.yml` file *doesn't* save any data f
             - '5000:5000'
         volumes:
             - .:/code
+
+## Run It
+
+To build the image and run the containers, do:
+
+    $ docker-compose up
+
+Shutdown with:
+
+    $ docker-compose down

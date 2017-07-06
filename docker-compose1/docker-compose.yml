@@ -1,12 +1,24 @@
 version: '2'
 
+# This will create two containers
 services:
+
+    # A container for the Flask application
     web:
+        # Build the image from the Dockerfile
         build: .
+
+        # Map the host's port 80 to the container's port 5000 (where Flask is
+        # running)
         ports:
             - "80:5000"
+
+        # Mount the current directory at `/code` on the container.
+        # Changes to the host's files will immediately be seen in the
+        # container.
         volumes:
             - .:/code
 
+    # A container for Redis
     redis:
         image: "redis:alpine"
