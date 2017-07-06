@@ -4,9 +4,9 @@ services:
     web:
         build: .
         ports:
-            - '5000:5000'
+            - "80:5000"
         volumes:
             - .:/code
 
     redis:
-        image: 'redis:alpine'
+        image: "redis:alpine"
