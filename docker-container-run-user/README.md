@@ -20,4 +20,4 @@ Then, open a shell inside the container from another terminal on the host OS:
 
 Then, from within the container:
 
-    # mkdir tmp; touch tmp/file.txt; chown -R 1000 ./tmp`
+    # mkdir tmp && touch tmp/file.txt && chown -R 1000 ./tmp
