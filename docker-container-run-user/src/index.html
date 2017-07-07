@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>App</title>
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <style>
+        body {
+            font-size: 3em;
+            font-family: 'VT323', monospace;
+            color: #3f6;
+            background-color: #111111;
+            padding: 127px;
+            margin: 0;
+        }
+        #cursor {
+            height: 17px;
+            width: 17px;
+            background-color: #3f6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Saluton Mondo!</h1>
+    <pre><code>
+$ python3
+Python 3.5.2 (default, Nov 17 2016, 17:05:23)
+[GCC 5.4.0 20160609] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> <span id="cursor">&nbsp;</span>
+    </code></pre>
+    <script>
+        (function () {
+
+            var cursor = document.getElementById('cursor');
+            var isCursorVisible = true;
+
+            function blinkCursor(cursorVisibility) {
+                if (cursorVisibility === true) {
+                    cursor.style.visibility = 'hidden';
+                    isCursorVisible = false;
+                } else {
+                    cursor.style.visibility = 'visible';
+                    isCursorVisible = true;
+                }
+            }
+
+            setInterval(function () {
+                blinkCursor(isCursorVisible);
+            }, 700);
+
+        }());
+    </script>
+</body>
+</html>
